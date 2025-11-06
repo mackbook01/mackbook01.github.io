@@ -36,6 +36,50 @@ p {text-align:center;}
 
 <body>
 
+<audio id="player"></audio>
+
+
+
+    <div id="overlay" onclick="fadeAndPlay()">
+
+      <h1> click to enter!!!! </h1>
+
+    </div>
+
+
+
+    <script>
+
+      // hardcode some mp3s cuz no php on githbu pages!! grr!!
+
+     const songs = ["1.mp3"];
+
+
+
+      function fadeAndPlay() {
+
+        const overlay = document.getElementById("overlay");
+
+        const player = document.getElementById("player");
+
+
+
+        // pick one at random - i hope
+
+        const randomSong = songs[Math.floor(Math.random() * songs.length)];
+
+        player.src = randomSong;
+
+        overlay.classList.add("fade-out");
+
+        setTimeout(() => overlay.remove(), 1000);
+
+        player.play();
+
+    }
+
+    </script>
+    
 <div id="grad"></div>
 
 <h1>Welcome to this website!</h1>
