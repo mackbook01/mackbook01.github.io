@@ -71,7 +71,7 @@ a:hover, a:active {
 
       // hardcode some mp3s cuz no php on githbu pages!! grr!!
 
-     const songs = ["1.mp3", "dance.mp3", "iris.mp3"];
+     const songs = ["1.mp3","2.mp3","3.mp3","4.mp3","5.mp3","6.mp3","7.mp3","8.mp3","9.mp3","10.mp3","11.mp3",];
 
 
 
@@ -84,9 +84,22 @@ a:hover, a:active {
 
 
         // pick one at random - i hope
+        const pickRandom = Math.floor(Math.random() * 3);
+        
+        // I am the html java final boss
 
-        const randomSong = songs[Math.floor(Math.random() * songs.length)];
+        let randomSong;
+        if (pickRandom === 1) {
+          randomSong = songs[Math.floor(Math.random() * songs.length)];
+          console.log("Picked a random song: ", randomSong)
+        } else {
+          randomSong = songs[0];
+          console.log("All Of The Lights 🔥")
+        }
 
+
+
+        
         player.src = randomSong;
 
         overlay.classList.add("fade-out");
